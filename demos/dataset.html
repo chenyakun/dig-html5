@@ -1,0 +1,12 @@
+<title>data-*</title>
+
+<div id="user" data-id="123456" data-user="cyk">
+hello world
+</div>
+
+<script>
+	var el = document.querySelector("#user");
+	console.log(el.id);
+	console.log(el.dataset.id);
+	console.log(el.dataset.user);
+</script>
