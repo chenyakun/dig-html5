@@ -1,0 +1,22 @@
+<!doctype html5>
+<html>
+<head>
+  <title>postMessage (same domain)</title>
+  <script type="text/javascript">
+	 function init() {
+		 var worker = new Worker('compute.js');
+
+		 // but in Chrome this will error, safari and firefox ok.
+		 worker.onmessage = function( event ){
+		     document.getElementById("result").innerHTML += event.data; 
+		 };
+	 }
+
+	 document.onload = init();
+  </script>
+</head>
+<body>
+<div id = "result"> </div>	
+</body>
+</script>
+</html>

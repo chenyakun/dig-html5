@@ -20,8 +20,10 @@ if (typeof window.FileReader === 'undefined') {
 upload.onchange = function (e) {
   e.preventDefault();
 
+  // files is a FileList Object similar NodeList
   var file = upload.files[0],
       reader = new FileReader();
+
   reader.onload = function (event) {
     var img = new Image();
     img.src = event.target.result;
@@ -32,6 +34,8 @@ upload.onchange = function (e) {
     holder.innerHTML = '';
     holder.appendChild(img);
   };
+
+  // start read the content of the file
   reader.readAsDataURL(file);
 
   return false;

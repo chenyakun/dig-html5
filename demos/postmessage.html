@@ -14,6 +14,7 @@ iframe {
       </form>
     </article>
 <script>
+// 必须引用通信网页的实例
 var win = document.getElementById("iframe").contentWindow;
 
 addEvent(document.getElementsByTagName('form')[0], 'submit', function (e) {
